@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- Tailwindcss cdn-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: FrauncesF;
+      src: url('./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .card__heading {
+      font-family: Fraunces;
+    }
+
+    .price__normal{
+      font-family: Fraunces;
+    }
+
+    .addtocart__text{
+      font-family: Montserrat;
+    }
+  </style>
+
+
+</head>
+
+<body class=" flex flex-col h-[800px] sm:justify-center sm:items-center" style="background-color: hsl(30, 38%, 92%);">
+  <!--  Card -->
+  <div class="card flex flex-col flex-wrap  sm:w-[640px] sm:h-[460px] rounded-xl  shadow-2xl m-4 sm:overflow-hidden">
+    <!-- Left image-->
+    <img class="hidden sm:flex flex-1 sm:h-auto w-[100%] h-[400px] sm:h-100 sm:max-w-[320px] aspect-auto " src="./images/image-product-desktop.jpg" alt="">
+   
+    <!-- Left image-->
+    <img class="flex sm:hidden flex-1 min-h-[220px] sm:h-auto w-[100%] h-[400px] sm:h-100 sm:max-w-[320px] aspect-auto" src="./images/image-product-mobile.jpg" alt="">
+   
+    <!-- Right Content-->
+    <div class="card__content p-[18px] sm:p-[32px] bg-[#fff] sm:w-[320px] flex flex-col items-stretch ">
+      <h3 class="font-semibold text-[#95959B] " style="letter-spacing: 4px;"> PERFUME </h4>
+        <!-- Card Heading-->
+        <h1 class="card__heading text-4xl font-bold sm:w-[200px] leading-8 text-[#1D2228] my-4"> Gabrielle Essence Eau De Parfum
+        </h1>
+        <!-- Card Paragraph-->
+        <p class="card__text sm:max-w-[260px] text-[#95959B] my-4">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <!-- Card Price-->
+        <div class="flex flex-col py-1 my-4">
+          <div class="price flex flex-row items-center">
+            <h2 class="price__normal text-3xl text-[#194131] font-semibold" style="color:hsl(158, 36%, 37%)">$149.99</h2>
+            <s class="price__cut ml-4 text-[#95959B] font-semibold">$149.99</s>
+          </div>
+          <!-- Card Button-->
+          <button
+            class="flex justify-center items-center w-[100%] px-[16px] py-[10px] my-4 bg-[#194131] text-white rounded-md shadow-md font-semibold my-4">
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                fill="#FFF" />
+            </svg>
+            <p class="addtocart__text px-2 text-sm font-semibold">Add to Cart</p>
+          </button>
+        </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
